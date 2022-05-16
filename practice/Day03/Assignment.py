@@ -43,3 +43,30 @@ for char in range(0, len(s)):
       mod_s += s[char]
 
 print(f"mod_s : {mod_s}")
+
+#5
+print("-"*40)
+str1 = input("Enter a mixed string: ")
+res = []
+temp = str1.split()
+for i in temp:
+    if  any (chr.isalpha() for chr in i ) and any  (chr.isdigit() for chr in i):
+        res.append(i)
+print("Both charcter and number : " + str(res))
+
+# 6
+print("-"*40)
+str1 = input("Enter mixed string : ")
+alph = 0
+dig = 0
+special = 0
+for i in range(len(str1)):
+    if(str1[i].isalpha()):
+        alph = alph+1
+    elif(str1[i].isdigit()):
+        dig = dig+1
+    else:
+        special = special+1
+print("Alphabets in string : ",alph)
+print("Digits in string : ",dig)
+print("Special in string : ",special)
